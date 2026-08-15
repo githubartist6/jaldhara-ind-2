@@ -19,7 +19,10 @@ connectDB();
 // Middleware
 app.use(
   cors({
-    origin: "https://sakjaldhara.netlify.app",
+    origin: [
+      "http://localhost:5173",
+      "https://sakjaldhara.netlify.app",
+    ],
   }),
 );
 
