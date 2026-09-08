@@ -21,7 +21,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://sakjaldhara01.netlify.app",
+      "https://jaldharaind.in",
     ],
   }),
 );
