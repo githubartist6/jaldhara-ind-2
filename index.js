@@ -8,6 +8,7 @@ const contactRoutes = require("./routes/contactRoutes");
 const distributorRoutes = require("./routes/distributorRoutes");
 
 // Admin
+const userRoutes = require("./routes/userRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const adminAuthRoutes = require("./routes/adminAuthRoutes");
 
@@ -19,10 +20,7 @@ connectDB();
 // Middleware
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://jaldharaind.in",
-    ],
+    origin: ["http://localhost:5173", "https://jaldharaind.in"],
   }),
 );
 
@@ -33,6 +31,7 @@ app.use("/api", contactRoutes);
 app.use("/api", distributorRoutes);
 
 // Admin Routes
+app.use("/api", userRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/admin", adminAuthRoutes);
 
